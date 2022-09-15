@@ -1,0 +1,147 @@
+<template>
+    <body>
+        <nav>
+            <div class="navigasi">
+                <router-link :to="{name: 'home' }" >
+                        Rumah Tradisional <br> Indonesia
+                </router-link>
+                <div class="navigasi">
+                    <router-link :to="{name: 'home' }" class="home">
+                        Home
+                    </router-link>
+
+                    <router-link :to="{name: 'upacaraadat' }" class="provinsi">
+                        Upacara
+                    </router-link>
+
+                    <router-link :to="{name: 'ragamhias' }" class="ornamen">
+					    Ragam&nbsp;Hias
+				    </router-link>
+
+                    <router-link :to="{name: 'visualisasi' }" class="visualisasi">
+                        Visualisasi
+                    </router-link>
+
+                    <a href="#" class="search">SEARCH</a>
+                    
+                    <div class="search" style="top:2.5px; margin:0; line-height:0.5;">
+                        <input v-model="message" type="text" placeholder="Search" size="2" style="height:40%; width:110%;">
+                        <span @click="reloadPage" type="submit" style="font-size: 12px; height:40%; border-radius:0; border:2px solid; border-color:black; padding-bottom:4px;">
+                            <router-link :to="{ name: 'search', params: {id: message}}" style="text-align:center;">
+                                <b>&nbsp;Search&nbsp;Rumah&nbsp;</b>
+                            </router-link>
+                        </span>
+				    </div>
+                </div>
+                
+            </div>
+		
+	    </nav>
+
+        <section style="height: 110vh;">
+
+            <div class="content1" v-for="(i,index) in getDeskripsiRagamHias" :key="index">
+                <div v-if="i.namaRagamHias">
+                    <h1 class="judul_rumah" >
+                        <br>
+                        {{i.namaRagamHias.value}}
+                        <br>
+                        <br>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="navigasi" v-for="(i,index) in getDeskripsiRagamHias" :key="index">
+                <div class="content2"  >
+                    <div v-if="i.image">
+                        <img class="centerrumah" v-bind:src="'/src/assets/' + (i.image.value)" style="height:50vh;">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="content2">  
+                    <div class="deskripsiragamhias" v-if="i.Deskripsi">
+                        <p style="line-height:2em; text-align:justify;">
+                            <b>Deskripsi :</b>
+                            <br>
+                            {{i.Deskripsi.value}} 
+                        </p>
+                    </div>	
+                    <!-- <div class="deskripsi" v-if="i.namaRumah">
+                        <p style="line-height:2em;">
+                            <b>Dimiliki oleh :</b>
+                            <br>
+                            <router-link :to="{ name: 'detailrumah', params: {id: i.namaRumah.value}}">
+                                <i>{{i.namaRumah.value}}</i>  
+                            </router-link>
+                            
+                        </p>
+                    </div>	                     -->
+                </div>
+
+
+            </div>
+
+            <div style="margin-left: 18px; margin-top: 7px;">
+                <br>
+                <b>Dimiliki oleh :</b>
+                <div class="navigasiImage">
+                    <div class="content3" v-for="(i,index) in getRumahFromRagamHias" :key="index" >
+                        <div class="deskripsiupacaraadat" v-if="i.namaRumah" style="margin-right: 30px;">
+                            <router-link :to="{ name: 'detailrumah', params: {id: i.namaRumah.value}}">
+                                {{i.namaRumah.value}}
+                            </router-link>
+                        </div>
+                    </div>	                    
+                </div>
+            </div>
+
+
+        </section>
+
+        <footer>
+            <span class="footer_home">
+                    Universitas Kristen Duta Wacana	
+            </span>
+        </footer>
+
+
+
+    </body>
+
+</template>
+
+<script>
+import {mapState} from 'vuex'
+import {mapActions} from 'vuex'
+
+
+export default {
+
+  mounted(){
+    this.$store.dispatch('getDeskripsiRagamHias', this.$route.params.id),
+    this.$store.dispatch('getRumahFromRagamHias', this.$route.params.id)
+     
+  },
+  computed:{
+      ...mapState([
+        'getDeskripsiRagamHias',
+        'getRumahFromRagamHias'
+      ])
+  },
+  methods:{
+      ...mapActions([
+        'getDeskripsiRagamHias',
+        'getRumahFromRagamHias'
+      ]),
+
+
+  },
+  data(){
+    return{
+      message : '0'
+    }
+  },
+
+}
+</script>
