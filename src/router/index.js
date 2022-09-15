@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import Provinsi from '../views/Provinsi.vue'
 import RagamHias from '../views/RagamHias.vue'
 import DetailBahan from '../views/DetailBahan.vue'
