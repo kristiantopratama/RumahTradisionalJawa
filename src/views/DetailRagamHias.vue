@@ -38,7 +38,7 @@
 		
 	    </nav>
 
-        <section style="height: 110vh;">
+        <section style="height: 140vh;">
 
             <div class="content1" v-for="(i,index) in getDeskripsiRagamHias" :key="index">
                 <div v-if="i.namaRagamHias">
