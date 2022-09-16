@@ -84,7 +84,7 @@ p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 36vh;
+    max-height: 34vh;
     align-content: flex-start;
 }
 
