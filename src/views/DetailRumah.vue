@@ -38,7 +38,7 @@
 		
 	    </nav>
 
-        <section style="height: 245vh;">
+        <section style="height: 250vh;">
         
             <span v-for="(i,index) in getDetailRumah.slice(getDetailRumah,1)" :key="index">
                 <div class="borderbawah">
