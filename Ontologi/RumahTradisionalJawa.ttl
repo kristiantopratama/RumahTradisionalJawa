@@ -1,16 +1,16 @@
-@prefix : <http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa> .
+@prefix : <http://alunalun.info/ontology/rumahtradisional> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rumah: <http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#> .
+@prefix rumah: <http://alunalun.info/ontology/rumahtradisional#> .
 @prefix schema: <http://schema.org/> .
-@base <http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa> .
+@base <http://alunalun.info/ontology/rumahtradisional> .
 
-<http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa> rdf:type owl:Ontology ;
-                                                                 rdfs:comment """Berdasarkan jurnal Fabio Papacchini, dilengkapi dengan value dari Class
-co : hasKasta value Bangsawan, hasKomponen value 'Atap Brunjung'""" .
+<http://alunalun.info/ontology/rumahtradisional> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <http://alunalun.info/ontologi/rumahtradisional/1.0.0> ;
+                                                  rdfs:comment "Pada version 1.0.0, pengerjaan ontologi berfokus untuk memodelkan Rumah Tradisional Jawa." .
 
 #################################################################
 #    Annotation properties
@@ -32,50 +32,50 @@ schema:video rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#asalDaerah
+###  http://alunalun.info/ontology/rumahtradisional#asalDaerah
 rumah:asalDaerah rdf:type owl:ObjectProperty ;
                  rdfs:domain rumah:RumahTradisional ;
                  rdfs:range rumah:Provinsi .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasBahan
+###  http://alunalun.info/ontology/rumahtradisional#hasBahan
 rumah:hasBahan rdf:type owl:ObjectProperty ;
                rdfs:domain rumah:KomponenRumah ;
                rdfs:range rumah:Bahan .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasKasta
+###  http://alunalun.info/ontology/rumahtradisional#hasKasta
 rumah:hasKasta rdf:type owl:ObjectProperty ;
                rdfs:domain rumah:RumahTradisional ;
                rdfs:range rumah:Kasta .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasKomponen
+###  http://alunalun.info/ontology/rumahtradisional#hasKomponen
 rumah:hasKomponen rdf:type owl:ObjectProperty ;
                   rdfs:domain rumah:RumahTradisional ;
                   rdfs:range rumah:KomponenRumah .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasKonstruksi
+###  http://alunalun.info/ontology/rumahtradisional#hasKonstruksi
 rumah:hasKonstruksi rdf:type owl:ObjectProperty ;
                     rdfs:domain rumah:RumahTradisional ;
                     rdfs:range rumah:Konstruksi .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasRagamHias
+###  http://alunalun.info/ontology/rumahtradisional#hasRagamHias
 rumah:hasRagamHias rdf:type owl:ObjectProperty ;
                    rdfs:domain rumah:RumahTradisional ;
                    rdfs:range rumah:RagamHias ;
                    rdfs:comment "hasRagamHias" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasRuang
+###  http://alunalun.info/ontology/rumahtradisional#hasRuang
 rumah:hasRuang rdf:type owl:ObjectProperty ;
                rdfs:domain rumah:RumahTradisional ;
                rdfs:range rumah:RuangRumah .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasUpacara
+###  http://alunalun.info/ontology/rumahtradisional#hasUpacara
 rumah:hasUpacara rdf:type owl:ObjectProperty ;
                  rdfs:domain rumah:RumahTradisional ;
                  rdfs:range rumah:UpacaraAdat .
@@ -85,7 +85,7 @@ rumah:hasUpacara rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#hasDenah
+###  http://alunalun.info/ontology/rumahtradisional#hasDenah
 rumah:hasDenah rdf:type owl:DatatypeProperty ;
                rdfs:domain rumah:RumahTradisionalJawa ;
                rdfs:range xsd:string .
@@ -95,7 +95,7 @@ rumah:hasDenah rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap
+###  http://alunalun.info/ontology/rumahtradisional#Atap
 rumah:Atap rdf:type owl:Class ;
            rdfs:subClassOf rumah:KomponenRumah ,
                            [ rdf:type owl:Restriction ;
@@ -105,18 +105,18 @@ rumah:Atap rdf:type owl:Class ;
            rdfs:label "Atap" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bahan
+###  http://alunalun.info/ontology/rumahtradisional#Bahan
 rumah:Bahan rdf:type owl:Class ;
             rdfs:subClassOf owl:Thing ;
             rdfs:label "Bahan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bangsawan
+###  http://alunalun.info/ontology/rumahtradisional#Bangsawan
 rumah:Bangsawan rdf:type owl:Class ;
                 rdfs:subClassOf rumah:Kasta .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bebatur
+###  http://alunalun.info/ontology/rumahtradisional#Bebatur
 rumah:Bebatur rdf:type owl:Class ;
               rdfs:subClassOf rumah:KomponenRumah ,
                               [ rdf:type owl:Restriction ;
@@ -125,7 +125,7 @@ rumah:Bebatur rdf:type owl:Class ;
                               ] .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Brunjung
+###  http://alunalun.info/ontology/rumahtradisional#Brunjung
 rumah:Brunjung rdf:type owl:Class ;
                rdfs:subClassOf rumah:KomponenRumah ,
                                [ rdf:type owl:Restriction ;
@@ -134,7 +134,7 @@ rumah:Brunjung rdf:type owl:Class ;
                                ] .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Dinding
+###  http://alunalun.info/ontology/rumahtradisional#Dinding
 rumah:Dinding rdf:type owl:Class ;
               rdfs:subClassOf rumah:KomponenRumah ,
                               [ rdf:type owl:Restriction ;
@@ -144,7 +144,7 @@ rumah:Dinding rdf:type owl:Class ;
               rdfs:label "Dinding" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Jendela
+###  http://alunalun.info/ontology/rumahtradisional#Jendela
 rumah:Jendela rdf:type owl:Class ;
               rdfs:subClassOf rumah:KomponenRumah ,
                               [ rdf:type owl:Restriction ;
@@ -154,25 +154,25 @@ rumah:Jendela rdf:type owl:Class ;
               rdfs:label "Jendela" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kasta
+###  http://alunalun.info/ontology/rumahtradisional#Kasta
 rumah:Kasta rdf:type owl:Class ;
             rdfs:subClassOf owl:Thing ;
             rdfs:label "Kasta" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KomponenRumah
+###  http://alunalun.info/ontology/rumahtradisional#KomponenRumah
 rumah:KomponenRumah rdf:type owl:Class ;
                     rdfs:subClassOf owl:Thing ;
                     rdfs:label "Komponen Rumah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Konstruksi
+###  http://alunalun.info/ontology/rumahtradisional#Konstruksi
 rumah:Konstruksi rdf:type owl:Class ;
                  rdfs:subClassOf rumah:KomponenRumah ;
                  rdfs:comment "Konstruksi" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Lantai
+###  http://alunalun.info/ontology/rumahtradisional#Lantai
 rumah:Lantai rdf:type owl:Class ;
              rdfs:subClassOf rumah:KomponenRumah ,
                              [ rdf:type owl:Restriction ;
@@ -182,24 +182,24 @@ rumah:Lantai rdf:type owl:Class ;
              rdfs:label "Lantai" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Logam
+###  http://alunalun.info/ontology/rumahtradisional#Logam
 rumah:Logam rdf:type owl:Class ;
             rdfs:subClassOf rumah:Bahan ;
             owl:disjointWith rumah:Non_Logam ;
             rdfs:label "Logam" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasyarakatKaya
+###  http://alunalun.info/ontology/rumahtradisional#MasyarakatKaya
 rumah:MasyarakatKaya rdf:type owl:Class ;
                      rdfs:subClassOf rumah:Kasta .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasyarakatUmum
+###  http://alunalun.info/ontology/rumahtradisional#MasyarakatUmum
 rumah:MasyarakatUmum rdf:type owl:Class ;
                      rdfs:subClassOf rumah:Kasta .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Molo
+###  http://alunalun.info/ontology/rumahtradisional#Molo
 rumah:Molo rdf:type owl:Class ;
            rdfs:subClassOf rumah:KomponenRumah ,
                            [ rdf:type owl:Restriction ;
@@ -208,13 +208,13 @@ rumah:Molo rdf:type owl:Class ;
                            ] .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Non_Logam
+###  http://alunalun.info/ontology/rumahtradisional#Non_Logam
 rumah:Non_Logam rdf:type owl:Class ;
                 rdfs:subClassOf rumah:Bahan ;
                 rdfs:label "Non Logam" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pintu
+###  http://alunalun.info/ontology/rumahtradisional#Pintu
 rumah:Pintu rdf:type owl:Class ;
             rdfs:subClassOf rumah:KomponenRumah ,
                             [ rdf:type owl:Restriction ;
@@ -224,25 +224,25 @@ rumah:Pintu rdf:type owl:Class ;
             rdfs:label "Pintu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Provinsi
+###  http://alunalun.info/ontology/rumahtradisional#Provinsi
 rumah:Provinsi rdf:type owl:Class ;
                rdfs:subClassOf owl:Thing ;
                rdfs:label "Provinsi" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RagamHias
+###  http://alunalun.info/ontology/rumahtradisional#RagamHias
 rumah:RagamHias rdf:type owl:Class ;
                 rdfs:subClassOf owl:Thing ;
                 rdfs:label "Ragam Hias" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RuangRumah
+###  http://alunalun.info/ontology/rumahtradisional#RuangRumah
 rumah:RuangRumah rdf:type owl:Class ;
                  rdfs:subClassOf owl:Thing ;
                  rdfs:label "Ruang Rumah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahJoglo
+###  http://alunalun.info/ontology/rumahtradisional#RumahJoglo
 rumah:RumahJoglo rdf:type owl:Class ;
                  rdfs:subClassOf rumah:RumahTradisionalJawa ,
                                  [ rdf:type owl:Restriction ;
@@ -326,7 +326,7 @@ rumah:RumahJoglo rdf:type owl:Class ;
                  rdfs:label "Rumah Joglo" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahKampung
+###  http://alunalun.info/ontology/rumahtradisional#RumahKampung
 rumah:RumahKampung rdf:type owl:Class ;
                    rdfs:subClassOf rumah:RumahTradisionalJawa ,
                                    [ rdf:type owl:Restriction ;
@@ -394,7 +394,7 @@ rumah:RumahKampung rdf:type owl:Class ;
                    rdfs:label "Rumah Kampung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahLimasan
+###  http://alunalun.info/ontology/rumahtradisional#RumahLimasan
 rumah:RumahLimasan rdf:type owl:Class ;
                    rdfs:subClassOf rumah:RumahTradisionalJawa ,
                                    [ rdf:type owl:Restriction ;
@@ -470,7 +470,7 @@ rumah:RumahLimasan rdf:type owl:Class ;
                    rdfs:label "Rumah Limasan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahPanggangPe
+###  http://alunalun.info/ontology/rumahtradisional#RumahPanggangPe
 rumah:RumahPanggangPe rdf:type owl:Class ;
                       rdfs:subClassOf rumah:RumahTradisionalJawa ,
                                       [ rdf:type owl:Restriction ;
@@ -530,7 +530,7 @@ rumah:RumahPanggangPe rdf:type owl:Class ;
                       rdfs:label "Rumah Panggang Pe" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahTajug
+###  http://alunalun.info/ontology/rumahtradisional#RumahTajug
 rumah:RumahTajug rdf:type owl:Class ;
                  rdfs:subClassOf rumah:RumahTradisionalJawa ,
                                  [ rdf:type owl:Restriction ;
@@ -577,13 +577,13 @@ rumah:RumahTajug rdf:type owl:Class ;
                  rdfs:label "Rumah Tajug" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahTradisional
+###  http://alunalun.info/ontology/rumahtradisional#RumahTradisional
 rumah:RumahTradisional rdf:type owl:Class ;
                        rdfs:subClassOf owl:Thing ;
                        rdfs:label "Rumah Tradisional" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RumahTradisionalJawa
+###  http://alunalun.info/ontology/rumahtradisional#RumahTradisionalJawa
 rumah:RumahTradisionalJawa rdf:type owl:Class ;
                            rdfs:subClassOf rumah:RumahTradisional ,
                                            [ rdf:type owl:Class ;
@@ -614,7 +614,7 @@ rumah:RumahTradisionalJawa rdf:type owl:Class ;
                            rdfs:label "Rumah Tradisional Jawa" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tiang
+###  http://alunalun.info/ontology/rumahtradisional#Tiang
 rumah:Tiang rdf:type owl:Class ;
             rdfs:subClassOf rumah:KomponenRumah ,
                             [ rdf:type owl:Restriction ;
@@ -624,7 +624,7 @@ rumah:Tiang rdf:type owl:Class ;
             rdfs:label "Tiang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Umpak
+###  http://alunalun.info/ontology/rumahtradisional#Umpak
 rumah:Umpak rdf:type owl:Class ;
             rdfs:subClassOf rumah:KomponenRumah ,
                             [ rdf:type owl:Restriction ;
@@ -634,7 +634,7 @@ rumah:Umpak rdf:type owl:Class ;
             rdfs:label "Umpak" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#UpacaraAdat
+###  http://alunalun.info/ontology/rumahtradisional#UpacaraAdat
 rumah:UpacaraAdat rdf:type owl:Class ;
                   rdfs:subClassOf owl:Thing ;
                   rdfs:label "Upacara Adat" .
@@ -644,157 +644,157 @@ rumah:UpacaraAdat rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Ander
+###  http://alunalun.info/ontology/rumahtradisional#Ander
 rumah:Ander rdf:type owl:NamedIndividual ,
                      rumah:Tiang ;
             rumah:hasBahan rumah:KayuJati ;
             rdfs:label "Ander" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Brunjung
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Brunjung
 rumah:Atap_Brunjung rdf:type owl:NamedIndividual ,
                              rumah:Atap ;
                     rumah:hasBahan rumah:KayuJati ;
                     rdfs:label "Atap Brunjung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Emper
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Emper
 rumah:Atap_Emper rdf:type owl:NamedIndividual ,
                           rumah:Atap ;
                  rumah:hasBahan rumah:KayuJati ;
                  rdfs:label "Atap Emper" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Gajah
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Gajah
 rumah:Atap_Gajah rdf:type owl:NamedIndividual ,
                           rumah:Atap ;
                  rumah:hasBahan rumah:KayuJati ;
                  rdfs:label "Atap Gajah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Kejen
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Kejen
 rumah:Atap_Kejen rdf:type owl:NamedIndividual ,
                           rumah:Atap ;
                  rumah:hasBahan rumah:KayuJati ;
                  rdfs:label "Atap Kejen" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Penanggap
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Penanggap
 rumah:Atap_Penanggap rdf:type owl:NamedIndividual ,
                               rumah:Atap ;
                      rumah:hasBahan rumah:KayuJati ;
                      rdfs:label "Atap Penanggap" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Penangkur
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Penangkur
 rumah:Atap_Penangkur rdf:type owl:NamedIndividual ,
                               rumah:Atap ;
                      rumah:hasBahan rumah:KayuJati ;
                      rdfs:label "Atap Penangkur" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Persegi_Panjang
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Persegi_Panjang
 rumah:Atap_Persegi_Panjang rdf:type owl:NamedIndividual ,
                                     rumah:Atap ;
                            rumah:hasBahan rumah:KayuJati ;
                            rdfs:label "Atap Persegi Panjang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Atap_Terbil
+###  http://alunalun.info/ontology/rumahtradisional#Atap_Terbil
 rumah:Atap_Terbil rdf:type owl:NamedIndividual ,
                            rumah:Atap ;
                   rumah:hasBahan rumah:KayuJati ;
                   rdfs:label "Atap Trebil" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bambu
+###  http://alunalun.info/ontology/rumahtradisional#Bambu
 rumah:Bambu rdf:type owl:NamedIndividual ,
                      rumah:Non_Logam ;
             rdfs:label "Bambu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bangsawan
+###  http://alunalun.info/ontology/rumahtradisional#Bangsawan
 rumah:Bangsawan rdf:type owl:NamedIndividual ,
                          rumah:Bangsawan .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#BatuBata
+###  http://alunalun.info/ontology/rumahtradisional#BatuBata
 rumah:BatuBata rdf:type owl:NamedIndividual ,
                         rumah:Non_Logam ;
                rdfs:label "Batu Bata" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#BatuKali
+###  http://alunalun.info/ontology/rumahtradisional#BatuKali
 rumah:BatuKali rdf:type owl:NamedIndividual ,
                         rumah:Non_Logam ;
                rdfs:label "Batu Kali" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bebatur
+###  http://alunalun.info/ontology/rumahtradisional#Bebatur
 rumah:Bebatur rdf:type owl:NamedIndividual ,
                        rumah:Bebatur ;
               rumah:hasBahan rumah:Tanah .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Besi
+###  http://alunalun.info/ontology/rumahtradisional#Besi
 rumah:Besi rdf:type owl:NamedIndividual ,
                     rumah:Logam ;
            rdfs:label "Besi" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Blandar
+###  http://alunalun.info/ontology/rumahtradisional#Blandar
 rumah:Blandar rdf:type owl:NamedIndividual ,
                        rumah:Tiang ;
               rumah:hasBahan rumah:KayuJati ;
               rdfs:label "Blandar" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bleketepe
+###  http://alunalun.info/ontology/rumahtradisional#Bleketepe
 rumah:Bleketepe rdf:type owl:NamedIndividual ,
                          rumah:Dinding ;
                 rumah:hasBahan rumah:DaunKelapa ;
                 rdfs:label "Bleketepe" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Brunjung
+###  http://alunalun.info/ontology/rumahtradisional#Brunjung
 rumah:Brunjung rdf:type owl:NamedIndividual ,
                         rumah:Brunjung ;
                rumah:hasBahan rumah:KayuJati .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Bujur_Sangkar
+###  http://alunalun.info/ontology/rumahtradisional#Bujur_Sangkar
 rumah:Bujur_Sangkar rdf:type owl:NamedIndividual ,
                              rumah:Konstruksi ;
                     rdfs:label "Bujur Sangkar" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#DaunKelapa
+###  http://alunalun.info/ontology/rumahtradisional#DaunKelapa
 rumah:DaunKelapa rdf:type owl:NamedIndividual ,
                           rumah:Non_Logam ;
                  rdfs:label "Daun Kelapa" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Dhudhan
+###  http://alunalun.info/ontology/rumahtradisional#Dhudhan
 rumah:Dhudhan rdf:type owl:NamedIndividual ,
                        rumah:Jendela ;
               rumah:hasBahan rumah:KayuJati ;
               rdfs:label "Dhudhan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Emas
+###  http://alunalun.info/ontology/rumahtradisional#Emas
 rumah:Emas rdf:type owl:NamedIndividual ,
                     rumah:Logam ;
            rdfs:label "Emas" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gandok
+###  http://alunalun.info/ontology/rumahtradisional#Gandok
 rumah:Gandok rdf:type owl:NamedIndividual ,
                       rumah:RuangRumah ;
              rdfs:comment "Gandok merupakan ruang rumah yang berfungsi sebagai tempat penyimpanan perabot dapur, ruang makan, dan terkadang juga berfungsi sebagai dapur." ;
              rdfs:label "Gandok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Garuda
+###  http://alunalun.info/ontology/rumahtradisional#Garuda
 rumah:Garuda rdf:type owl:NamedIndividual ,
                       rumah:RagamHias ;
              schema:image "GARUDA.PNG" ;
@@ -802,42 +802,42 @@ rumah:Garuda rdf:type owl:NamedIndividual ,
              rdfs:label "Garuda" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gebyog
+###  http://alunalun.info/ontology/rumahtradisional#Gebyog
 rumah:Gebyog rdf:type owl:NamedIndividual ,
                       rumah:Dinding ;
              rumah:hasBahan rumah:KayuPapan ;
              rdfs:label "Gebyog" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gedheg
+###  http://alunalun.info/ontology/rumahtradisional#Gedheg
 rumah:Gedheg rdf:type owl:NamedIndividual ,
                       rumah:Dinding ;
              rumah:hasBahan rumah:Bambu ;
              rdfs:label "Gedheg" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gedhongan
+###  http://alunalun.info/ontology/rumahtradisional#Gedhongan
 rumah:Gedhongan rdf:type owl:NamedIndividual ,
                          rumah:RuangRumah ;
                 rdfs:comment "Gendhongan merupakan ruang rumah yang berfungsi sebagai kandang kuda. Ruang ini menjadi bagian penting pada rumah Joglo masa lampau karena kuda adalah alat transportasi yang digunakan pada masa itu." ;
                 rdfs:label "Gedhongan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Geganja
+###  http://alunalun.info/ontology/rumahtradisional#Geganja
 rumah:Geganja rdf:type owl:NamedIndividual ,
                        rumah:Tiang ;
               rumah:hasBahan rumah:KayuJati ;
               rdfs:label "Geganja" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gimbal
+###  http://alunalun.info/ontology/rumahtradisional#Gimbal
 rumah:Gimbal rdf:type owl:NamedIndividual ,
                       rumah:Tiang ;
              rumah:hasBahan rumah:KayuJati ;
              rdfs:label "Gimbal" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Gunungan
+###  http://alunalun.info/ontology/rumahtradisional#Gunungan
 rumah:Gunungan rdf:type owl:NamedIndividual ,
                         rumah:RagamHias ;
                schema:image "GUNUNGAN.PNG" ;
@@ -845,7 +845,7 @@ rumah:Gunungan rdf:type owl:NamedIndividual ,
                rdfs:label "Gunungan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#InebSiji
+###  http://alunalun.info/ontology/rumahtradisional#InebSiji
 rumah:InebSiji rdf:type owl:NamedIndividual ,
                         rumah:Pintu ;
                rumah:hasBahan rumah:Bambu ,
@@ -853,7 +853,7 @@ rumah:InebSiji rdf:type owl:NamedIndividual ,
                rdfs:label "Ineb Siji" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Jago
+###  http://alunalun.info/ontology/rumahtradisional#Jago
 rumah:Jago rdf:type owl:NamedIndividual ,
                     rumah:RagamHias ;
            schema:image "JAGO.PNG" ;
@@ -861,20 +861,20 @@ rumah:Jago rdf:type owl:NamedIndividual ,
            rdfs:label "Jago" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Jawa_Tengah
+###  http://alunalun.info/ontology/rumahtradisional#Jawa_Tengah
 rumah:Jawa_Tengah rdf:type owl:NamedIndividual ,
                            rumah:Provinsi ;
                   rdfs:label "Jawa Tengah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Jogan
+###  http://alunalun.info/ontology/rumahtradisional#Jogan
 rumah:Jogan rdf:type owl:NamedIndividual ,
                      rumah:Lantai ;
             rumah:hasBahan rumah:Tanah ;
             rdfs:label "Jogan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloApitan
+###  http://alunalun.info/ontology/rumahtradisional#JogloApitan
 rumah:JogloApitan rdf:type owl:NamedIndividual ,
                            rumah:RumahJoglo ;
                   rumah:hasKasta rumah:Bangsawan ;
@@ -932,7 +932,7 @@ rumah:JogloApitan rdf:type owl:NamedIndividual ,
                   rdfs:label "Joglo Apitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloCeblokan
+###  http://alunalun.info/ontology/rumahtradisional#JogloCeblokan
 rumah:JogloCeblokan rdf:type owl:NamedIndividual ,
                              rumah:RumahJoglo ;
                     rumah:hasKasta rumah:Bangsawan ;
@@ -990,7 +990,7 @@ rumah:JogloCeblokan rdf:type owl:NamedIndividual ,
                     rdfs:label "Joglo Ceblokan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloHageng
+###  http://alunalun.info/ontology/rumahtradisional#JogloHageng
 rumah:JogloHageng rdf:type owl:NamedIndividual ,
                            rumah:RumahJoglo ;
                   rumah:hasKasta rumah:Bangsawan ;
@@ -1048,7 +1048,7 @@ rumah:JogloHageng rdf:type owl:NamedIndividual ,
                   rdfs:label "Joglo Hageng" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloJompongan
+###  http://alunalun.info/ontology/rumahtradisional#JogloJompongan
 rumah:JogloJompongan rdf:type owl:NamedIndividual ,
                               rumah:RumahJoglo ;
                      rumah:hasKasta rumah:Bangsawan ;
@@ -1106,7 +1106,7 @@ rumah:JogloJompongan rdf:type owl:NamedIndividual ,
                      rdfs:label "Joglo Jompongan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloKepuhanLawakan
+###  http://alunalun.info/ontology/rumahtradisional#JogloKepuhanLawakan
 rumah:JogloKepuhanLawakan rdf:type owl:NamedIndividual ,
                                    rumah:RumahJoglo ;
                           rumah:hasKasta rumah:Bangsawan ;
@@ -1164,7 +1164,7 @@ rumah:JogloKepuhanLawakan rdf:type owl:NamedIndividual ,
                           rdfs:label "Joglo Kepuhan Lawakan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloKepuhanLimolasan
+###  http://alunalun.info/ontology/rumahtradisional#JogloKepuhanLimolasan
 rumah:JogloKepuhanLimolasan rdf:type owl:NamedIndividual ,
                                      rumah:RumahJoglo ;
                             rumah:hasKasta rumah:Bangsawan ;
@@ -1222,7 +1222,7 @@ rumah:JogloKepuhanLimolasan rdf:type owl:NamedIndividual ,
                             rdfs:label "Joglo Kepuhan Limolasan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloLambangsari
+###  http://alunalun.info/ontology/rumahtradisional#JogloLambangsari
 rumah:JogloLambangsari rdf:type owl:NamedIndividual ,
                                 rumah:RumahJoglo ;
                        rumah:hasKasta rumah:Bangsawan ;
@@ -1279,7 +1279,7 @@ rumah:JogloLambangsari rdf:type owl:NamedIndividual ,
                        rdfs:label "Joglo Lambangsari" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloMangkurat
+###  http://alunalun.info/ontology/rumahtradisional#JogloMangkurat
 rumah:JogloMangkurat rdf:type owl:NamedIndividual ,
                               rumah:RumahJoglo ;
                      rumah:hasKasta rumah:Bangsawan ;
@@ -1337,7 +1337,7 @@ rumah:JogloMangkurat rdf:type owl:NamedIndividual ,
                      rdfs:label "Joglo Mangkurat" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloPengrawit
+###  http://alunalun.info/ontology/rumahtradisional#JogloPengrawit
 rumah:JogloPengrawit rdf:type owl:NamedIndividual ,
                               rumah:RumahJoglo ;
                      rumah:hasKasta rumah:Bangsawan ;
@@ -1395,7 +1395,7 @@ rumah:JogloPengrawit rdf:type owl:NamedIndividual ,
                      rdfs:label "Joglo Pengrawit" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloSemarTinandhu
+###  http://alunalun.info/ontology/rumahtradisional#JogloSemarTinandhu
 rumah:JogloSemarTinandhu rdf:type owl:NamedIndividual ,
                                   rumah:RumahJoglo ;
                          rumah:hasKasta rumah:Bangsawan ;
@@ -1453,7 +1453,7 @@ rumah:JogloSemarTinandhu rdf:type owl:NamedIndividual ,
                          rdfs:label "Joglo Semar Tinandhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloSinomApitan
+###  http://alunalun.info/ontology/rumahtradisional#JogloSinomApitan
 rumah:JogloSinomApitan rdf:type owl:NamedIndividual ,
                                 rumah:RumahJoglo ;
                        rumah:hasKasta rumah:Bangsawan ;
@@ -1511,7 +1511,7 @@ rumah:JogloSinomApitan rdf:type owl:NamedIndividual ,
                        rdfs:label "Joglo Sinom Apitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#JogloWantahApitan
+###  http://alunalun.info/ontology/rumahtradisional#JogloWantahApitan
 rumah:JogloWantahApitan rdf:type owl:NamedIndividual ,
                                  rumah:RumahJoglo ;
                         rumah:hasKasta rumah:Bangsawan ;
@@ -1570,7 +1570,7 @@ rumah:JogloWantahApitan rdf:type owl:NamedIndividual ,
                         rdfs:label "Joglo Wantah Apitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kaligrafi
+###  http://alunalun.info/ontology/rumahtradisional#Kaligrafi
 rumah:Kaligrafi rdf:type owl:NamedIndividual ,
                          rumah:RagamHias ;
                 schema:image "KALIGRAFI.PNG" ;
@@ -1578,7 +1578,7 @@ rumah:Kaligrafi rdf:type owl:NamedIndividual ,
                 rdfs:label "Kaligrafi" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungApitan
+###  http://alunalun.info/ontology/rumahtradisional#KampungApitan
 rumah:KampungApitan rdf:type owl:NamedIndividual ,
                              rumah:RumahKampung ;
                     rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1614,7 +1614,7 @@ rumah:KampungApitan rdf:type owl:NamedIndividual ,
                     rdfs:label "Kampung Apitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungCereGancet
+###  http://alunalun.info/ontology/rumahtradisional#KampungCereGancet
 rumah:KampungCereGancet rdf:type owl:NamedIndividual ,
                                  rumah:RumahKampung ;
                         rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1650,7 +1650,7 @@ rumah:KampungCereGancet rdf:type owl:NamedIndividual ,
                         rdfs:label "Kampung Cere Gancet" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungDaraGepak
+###  http://alunalun.info/ontology/rumahtradisional#KampungDaraGepak
 rumah:KampungDaraGepak rdf:type owl:NamedIndividual ,
                                 rumah:RumahKampung ;
                        rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1687,7 +1687,7 @@ rumah:KampungDaraGepak rdf:type owl:NamedIndividual ,
                        rdfs:label "Kampung Dara Gepak" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungGajahNgombe
+###  http://alunalun.info/ontology/rumahtradisional#KampungGajahNgombe
 rumah:KampungGajahNgombe rdf:type owl:NamedIndividual ,
                                   rumah:RumahKampung ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1724,7 +1724,7 @@ rumah:KampungGajahNgombe rdf:type owl:NamedIndividual ,
                          rdfs:label "Kampung Gajah Ngombe" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungGajahNjerum
+###  http://alunalun.info/ontology/rumahtradisional#KampungGajahNjerum
 rumah:KampungGajahNjerum rdf:type owl:NamedIndividual ,
                                   rumah:RumahKampung ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1761,7 +1761,7 @@ rumah:KampungGajahNjerum rdf:type owl:NamedIndividual ,
                          rdfs:label "Kampung Gajah Njerum" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungGotongMayit
+###  http://alunalun.info/ontology/rumahtradisional#KampungGotongMayit
 rumah:KampungGotongMayit rdf:type owl:NamedIndividual ,
                                   rumah:RumahKampung ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1797,7 +1797,7 @@ rumah:KampungGotongMayit rdf:type owl:NamedIndividual ,
                          rdfs:label "Kampung Gotong Mayit" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungKlobangNyander
+###  http://alunalun.info/ontology/rumahtradisional#KampungKlobangNyander
 rumah:KampungKlobangNyander rdf:type owl:NamedIndividual ,
                                      rumah:RumahKampung ;
                             rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1833,7 +1833,7 @@ rumah:KampungKlobangNyander rdf:type owl:NamedIndividual ,
                             rdfs:label "Kampung Klabang Nyander" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungLambangTeplok
+###  http://alunalun.info/ontology/rumahtradisional#KampungLambangTeplok
 rumah:KampungLambangTeplok rdf:type owl:NamedIndividual ,
                                     rumah:RumahKampung ;
                            rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1871,7 +1871,7 @@ rumah:KampungLambangTeplok rdf:type owl:NamedIndividual ,
                            rdfs:label "Kampung Lambang Teplok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungPaculGowang
+###  http://alunalun.info/ontology/rumahtradisional#KampungPaculGowang
 rumah:KampungPaculGowang rdf:type owl:NamedIndividual ,
                                   rumah:RumahKampung ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1908,7 +1908,7 @@ rumah:KampungPaculGowang rdf:type owl:NamedIndividual ,
                          rdfs:label "Kampung Pacul Gowang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungPokok
+###  http://alunalun.info/ontology/rumahtradisional#KampungPokok
 rumah:KampungPokok rdf:type owl:NamedIndividual ,
                             rumah:RumahKampung ;
                    rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1944,7 +1944,7 @@ rumah:KampungPokok rdf:type owl:NamedIndividual ,
                    rdfs:label "Kampung Pokok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungSemarPinondhong
+###  http://alunalun.info/ontology/rumahtradisional#KampungSemarPinondhong
 rumah:KampungSemarPinondhong rdf:type owl:NamedIndividual ,
                                       rumah:RumahKampung ;
                              rumah:hasKasta rumah:MasyarakatUmum ;
@@ -1980,7 +1980,7 @@ rumah:KampungSemarPinondhong rdf:type owl:NamedIndividual ,
                              rdfs:label "Kampung Semar Pinondhong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungSemarTinandhu
+###  http://alunalun.info/ontology/rumahtradisional#KampungSemarTinandhu
 rumah:KampungSemarTinandhu rdf:type owl:NamedIndividual ,
                                     rumah:RumahKampung ;
                            rumah:hasKasta rumah:MasyarakatUmum ;
@@ -2018,7 +2018,7 @@ rumah:KampungSemarTinandhu rdf:type owl:NamedIndividual ,
                            rdfs:label "Kampung Lambang Teplok Semar Tinandhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KampungTrajumas
+###  http://alunalun.info/ontology/rumahtradisional#KampungTrajumas
 rumah:KampungTrajumas rdf:type owl:NamedIndividual ,
                                rumah:RumahKampung ;
                       rumah:hasKasta rumah:MasyarakatUmum ;
@@ -2054,39 +2054,39 @@ rumah:KampungTrajumas rdf:type owl:NamedIndividual ,
                       rdfs:label "Kampung Trajumas" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kandhang
+###  http://alunalun.info/ontology/rumahtradisional#Kandhang
 rumah:Kandhang rdf:type owl:NamedIndividual ,
                         rumah:RuangRumah ;
                rdfs:comment "Kandhang merupakan ruang rumah yang berfungsi sebagai tempat melindungi ternak dari perubahan cuaca atau iklim yang ekstrim (panas, hujan dan angin), mencegah dan melindungi ternak dari penyakit, serta menjaga keamanan ternak dari pencurian." ;
                rdfs:label "Kandhang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KayuJati
+###  http://alunalun.info/ontology/rumahtradisional#KayuJati
 rumah:KayuJati rdf:type owl:NamedIndividual ,
                         rumah:Non_Logam ;
                rdfs:label "Kayu Jati" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KayuNangka
+###  http://alunalun.info/ontology/rumahtradisional#KayuNangka
 rumah:KayuNangka rdf:type owl:NamedIndividual ,
                           rumah:Non_Logam ;
                  rdfs:label "Kayu Nangka" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KayuPapan
+###  http://alunalun.info/ontology/rumahtradisional#KayuPapan
 rumah:KayuPapan rdf:type owl:NamedIndividual ,
                          rumah:Non_Logam ;
                 rdfs:label "Kayu Papan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kili
+###  http://alunalun.info/ontology/rumahtradisional#Kili
 rumah:Kili rdf:type owl:NamedIndividual ,
                     rumah:Tiang ;
            rumah:hasBahan rumah:KayuJati ;
            rdfs:label "Kili" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kotangan
+###  http://alunalun.info/ontology/rumahtradisional#Kotangan
 rumah:Kotangan rdf:type owl:NamedIndividual ,
                         rumah:Dinding ;
                rumah:hasBahan rumah:Bambu ,
@@ -2094,20 +2094,20 @@ rumah:Kotangan rdf:type owl:NamedIndividual ,
                rdfs:label "Kotangan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kuncung
+###  http://alunalun.info/ontology/rumahtradisional#Kuncung
 rumah:Kuncung rdf:type owl:NamedIndividual ,
                        rumah:RuangRumah ;
               rdfs:comment "Kuncung merupakan ruang rumah yang terletak di samping atau depan Pendapa yang berfungsi sebagai tempat bersantai seperti minum teh dan membaca koran. Selain itu, Kuncung juga berfungsi sebagai tempat pemberhentian kendaraan tamu atau pemilik rumah." ;
               rdfs:label "Kuncung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Kuningan
+###  http://alunalun.info/ontology/rumahtradisional#Kuningan
 rumah:Kuningan rdf:type owl:NamedIndividual ,
                         rumah:Logam ;
                rdfs:label "Kuningan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#KupuTarung
+###  http://alunalun.info/ontology/rumahtradisional#KupuTarung
 rumah:KupuTarung rdf:type owl:NamedIndividual ,
                           rumah:Pintu ;
                  rumah:hasBahan rumah:Bambu ,
@@ -2115,7 +2115,7 @@ rumah:KupuTarung rdf:type owl:NamedIndividual ,
                  rdfs:label "Kupu Tarung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Lek-Lekan
+###  http://alunalun.info/ontology/rumahtradisional#Lek-Lekan
 rumah:Lek-Lekan rdf:type owl:NamedIndividual ,
                          rumah:UpacaraAdat ;
                 schema:image "not_found.png" ;
@@ -2123,7 +2123,7 @@ rumah:Lek-Lekan rdf:type owl:NamedIndividual ,
                 rdfs:label "Lek-Lekan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanApitan
+###  http://alunalun.info/ontology/rumahtradisional#LimasanApitan
 rumah:LimasanApitan rdf:type owl:NamedIndividual ,
                              rumah:RumahLimasan ;
                     rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2172,7 +2172,7 @@ rumah:LimasanApitan rdf:type owl:NamedIndividual ,
                     rdfs:label "Limasan Apitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanApitanPengapit
+###  http://alunalun.info/ontology/rumahtradisional#LimasanApitanPengapit
 rumah:LimasanApitanPengapit rdf:type owl:NamedIndividual ,
                                      rumah:RumahLimasan ;
                             rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2221,7 +2221,7 @@ rumah:LimasanApitanPengapit rdf:type owl:NamedIndividual ,
                             rdfs:label "Limasan Apitan Pengapit" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanBapangan
+###  http://alunalun.info/ontology/rumahtradisional#LimasanBapangan
 rumah:LimasanBapangan rdf:type owl:NamedIndividual ,
                                rumah:RumahLimasan ;
                       rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2270,7 +2270,7 @@ rumah:LimasanBapangan rdf:type owl:NamedIndividual ,
                       rdfs:label "Limasan Bapangan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanCeblokan
+###  http://alunalun.info/ontology/rumahtradisional#LimasanCeblokan
 rumah:LimasanCeblokan rdf:type owl:NamedIndividual ,
                                rumah:RumahLimasan ;
                       rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2319,7 +2319,7 @@ rumah:LimasanCeblokan rdf:type owl:NamedIndividual ,
                       rdfs:label "Limasan Ceblokan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanCereGancet
+###  http://alunalun.info/ontology/rumahtradisional#LimasanCereGancet
 rumah:LimasanCereGancet rdf:type owl:NamedIndividual ,
                                  rumah:RumahLimasan ;
                         rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2368,7 +2368,7 @@ rumah:LimasanCereGancet rdf:type owl:NamedIndividual ,
                         rdfs:label "Limasan Cere Gancet" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanEmpyakSetangkep
+###  http://alunalun.info/ontology/rumahtradisional#LimasanEmpyakSetangkep
 rumah:LimasanEmpyakSetangkep rdf:type owl:NamedIndividual ,
                                       rumah:RumahLimasan ;
                              rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2417,7 +2417,7 @@ rumah:LimasanEmpyakSetangkep rdf:type owl:NamedIndividual ,
                              rdfs:label "Limasan Empyak Setangkep" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanGajahMungkur
+###  http://alunalun.info/ontology/rumahtradisional#LimasanGajahMungkur
 rumah:LimasanGajahMungkur rdf:type owl:NamedIndividual ,
                                    rumah:RumahLimasan ;
                           rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2467,7 +2467,7 @@ rumah:LimasanGajahMungkur rdf:type owl:NamedIndividual ,
                           rdfs:label "Limasan Gajah Mungkur" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanGajahNgombe
+###  http://alunalun.info/ontology/rumahtradisional#LimasanGajahNgombe
 rumah:LimasanGajahNgombe rdf:type owl:NamedIndividual ,
                                   rumah:RumahLimasan ;
                          rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2516,7 +2516,7 @@ rumah:LimasanGajahNgombe rdf:type owl:NamedIndividual ,
                          rdfs:label "Limasan Gajah Ngombe" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanGajahNjerum
+###  http://alunalun.info/ontology/rumahtradisional#LimasanGajahNjerum
 rumah:LimasanGajahNjerum rdf:type owl:NamedIndividual ,
                                   rumah:RumahLimasan ;
                          rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2565,7 +2565,7 @@ rumah:LimasanGajahNjerum rdf:type owl:NamedIndividual ,
                          rdfs:label "Limasan Gajah Njerum" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanGotongMayit
+###  http://alunalun.info/ontology/rumahtradisional#LimasanGotongMayit
 rumah:LimasanGotongMayit rdf:type owl:NamedIndividual ,
                                   rumah:RumahLimasan ;
                          rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2614,7 +2614,7 @@ rumah:LimasanGotongMayit rdf:type owl:NamedIndividual ,
                          rdfs:label "Limasan Gotong Mayit" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanKlabangNyander
+###  http://alunalun.info/ontology/rumahtradisional#LimasanKlabangNyander
 rumah:LimasanKlabangNyander rdf:type owl:NamedIndividual ,
                                      rumah:RumahLimasan ;
                             rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2663,7 +2663,7 @@ rumah:LimasanKlabangNyander rdf:type owl:NamedIndividual ,
                             rdfs:label "Limasan Klabang Nyander" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanLambangTeplok
+###  http://alunalun.info/ontology/rumahtradisional#LimasanLambangTeplok
 rumah:LimasanLambangTeplok rdf:type owl:NamedIndividual ,
                                     rumah:RumahLimasan ;
                            rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2713,7 +2713,7 @@ rumah:LimasanLambangTeplok rdf:type owl:NamedIndividual ,
                            rdfs:label "Limasan Lambang Teplok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanLambangsari
+###  http://alunalun.info/ontology/rumahtradisional#LimasanLambangsari
 rumah:LimasanLambangsari rdf:type owl:NamedIndividual ,
                                   rumah:RumahLimasan ;
                          rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2763,7 +2763,7 @@ rumah:LimasanLambangsari rdf:type owl:NamedIndividual ,
                          rdfs:label "Limasan Lambangsari" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanLawakan
+###  http://alunalun.info/ontology/rumahtradisional#LimasanLawakan
 rumah:LimasanLawakan rdf:type owl:NamedIndividual ,
                               rumah:RumahLimasan ;
                      rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2812,7 +2812,7 @@ rumah:LimasanLawakan rdf:type owl:NamedIndividual ,
                      rdfs:label "Limasan Lawakan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanPaculGowang
+###  http://alunalun.info/ontology/rumahtradisional#LimasanPaculGowang
 rumah:LimasanPaculGowang rdf:type owl:NamedIndividual ,
                                   rumah:RumahLimasan ;
                          rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2861,7 +2861,7 @@ rumah:LimasanPaculGowang rdf:type owl:NamedIndividual ,
                          rdfs:label "Limasan Pacul Gowang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanSemarPinondhong
+###  http://alunalun.info/ontology/rumahtradisional#LimasanSemarPinondhong
 rumah:LimasanSemarPinondhong rdf:type owl:NamedIndividual ,
                                       rumah:RumahLimasan ;
                              rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2910,7 +2910,7 @@ rumah:LimasanSemarPinondhong rdf:type owl:NamedIndividual ,
                              rdfs:label "Limasan Semar Pinondhong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanSemarTinandhu
+###  http://alunalun.info/ontology/rumahtradisional#LimasanSemarTinandhu
 rumah:LimasanSemarTinandhu rdf:type owl:NamedIndividual ,
                                     rumah:RumahLimasan ;
                            rumah:hasKasta rumah:MasyarakatKaya ;
@@ -2959,7 +2959,7 @@ rumah:LimasanSemarTinandhu rdf:type owl:NamedIndividual ,
                            rdfs:label "Limasan Semar Tinandhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanSinomLambangGantungRangkaKutukNgambang
+###  http://alunalun.info/ontology/rumahtradisional#LimasanSinomLambangGantungRangkaKutukNgambang
 rumah:LimasanSinomLambangGantungRangkaKutukNgambang rdf:type owl:NamedIndividual ,
                                                              rumah:RumahLimasan ;
                                                     rumah:hasKasta rumah:MasyarakatKaya ;
@@ -3008,7 +3008,7 @@ rumah:LimasanSinomLambangGantungRangkaKutukNgambang rdf:type owl:NamedIndividual
                                                     rdfs:label "Limasan Sinom Lambang Gantung Rangka Kutuk Ngambang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#LimasanTrajumasLambangGantung
+###  http://alunalun.info/ontology/rumahtradisional#LimasanTrajumasLambangGantung
 rumah:LimasanTrajumasLambangGantung rdf:type owl:NamedIndividual ,
                                              rumah:RumahLimasan ;
                                     rumah:hasKasta rumah:MasyarakatKaya ;
@@ -3057,21 +3057,21 @@ rumah:LimasanTrajumasLambangGantung rdf:type owl:NamedIndividual ,
                                     rdfs:label "Limasan Trajumas Lambang Gantung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Liwan
+###  http://alunalun.info/ontology/rumahtradisional#Liwan
 rumah:Liwan rdf:type owl:NamedIndividual ,
                      rumah:RuangRumah ;
             rdfs:comment "Liwan merupakan ruang rumah, terkhusus pada rumah Tajug, yang berfungsi sebagai tempat seluruh umat duduk atau bersujud saat menjalankan ibadah." ;
             rdfs:label "Liwan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Lumbung
+###  http://alunalun.info/ontology/rumahtradisional#Lumbung
 rumah:Lumbung rdf:type owl:NamedIndividual ,
                        rumah:RuangRumah ;
               rdfs:comment "Lumbung merupakan ruang rumah yang berfungsi sebagai tempat menyimpan padi. Lumbung padi memiliki peranan vital untuk menyimpan gabah atau beras dari hasil panen, oleh sebab itu Lumbung menjadi lambang ketahanan pangan bagi pemilik rumah." ;
               rdfs:label "Lumbung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Lung-Lungan
+###  http://alunalun.info/ontology/rumahtradisional#Lung-Lungan
 rumah:Lung-Lungan rdf:type owl:NamedIndividual ,
                            rumah:RagamHias ;
                   schema:image "LUNG-LUNGAN.PNG" ;
@@ -3079,7 +3079,7 @@ rumah:Lung-Lungan rdf:type owl:NamedIndividual ,
                   rdfs:label "Lung-Lungan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Makutho
+###  http://alunalun.info/ontology/rumahtradisional#Makutho
 rumah:Makutho rdf:type owl:NamedIndividual ,
                        rumah:RagamHias ;
               schema:image "MAKUTHO.PNG" ;
@@ -3087,7 +3087,7 @@ rumah:Makutho rdf:type owl:NamedIndividual ,
               rdfs:label "Makutho" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasjidPayungAgung
+###  http://alunalun.info/ontology/rumahtradisional#MasjidPayungAgung
 rumah:MasjidPayungAgung rdf:type owl:NamedIndividual ,
                                  rumah:RumahTajug ;
                         rumah:hasKomponen rumah:Atap_Gajah ,
@@ -3116,7 +3116,7 @@ rumah:MasjidPayungAgung rdf:type owl:NamedIndividual ,
                         rdfs:label "Masjid Payung Agung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasjidanLambangTeplok
+###  http://alunalun.info/ontology/rumahtradisional#MasjidanLambangTeplok
 rumah:MasjidanLambangTeplok rdf:type owl:NamedIndividual ,
                                      rumah:RumahTajug ;
                             rumah:hasKomponen rumah:Ander ,
@@ -3147,7 +3147,7 @@ rumah:MasjidanLambangTeplok rdf:type owl:NamedIndividual ,
                             rdfs:label "Masjidan Lambang Teplok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasjidanLawakan
+###  http://alunalun.info/ontology/rumahtradisional#MasjidanLawakan
 rumah:MasjidanLawakan rdf:type owl:NamedIndividual ,
                                rumah:RumahTajug ;
                       rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3181,24 +3181,24 @@ rumah:MasjidanLawakan rdf:type owl:NamedIndividual ,
                       rdfs:label "Masjidan Lawakan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasyarakatKaya
+###  http://alunalun.info/ontology/rumahtradisional#MasyarakatKaya
 rumah:MasyarakatKaya rdf:type owl:NamedIndividual ,
                               rumah:MasyarakatKaya .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#MasyarakatUmum
+###  http://alunalun.info/ontology/rumahtradisional#MasyarakatUmum
 rumah:MasyarakatUmum rdf:type owl:NamedIndividual ,
                               rumah:MasyarakatUmum .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Mikrab
+###  http://alunalun.info/ontology/rumahtradisional#Mikrab
 rumah:Mikrab rdf:type owl:NamedIndividual ,
                       rumah:RuangRumah ;
              rdfs:comment "Mikrab merupakan ruang rumah, terkhusus pada rumah Tajug, yang berfungsi sebagai tempat imam atau chotib saat memimpin jalannya ibadah." ;
              rdfs:label "Mikrab" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Mirong
+###  http://alunalun.info/ontology/rumahtradisional#Mirong
 rumah:Mirong rdf:type owl:NamedIndividual ,
                       rumah:RagamHias ;
              schema:image "MIRONG.PNG" ;
@@ -3206,20 +3206,20 @@ rumah:Mirong rdf:type owl:NamedIndividual ,
              rdfs:label "Mirong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Molo
+###  http://alunalun.info/ontology/rumahtradisional#Molo
 rumah:Molo rdf:type owl:NamedIndividual ,
                     rumah:Molo ;
            rumah:hasBahan rumah:KayuJati .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Monyetan
+###  http://alunalun.info/ontology/rumahtradisional#Monyetan
 rumah:Monyetan rdf:type owl:NamedIndividual ,
                         rumah:Jendela ;
                rumah:hasBahan rumah:KayuJati ;
                rdfs:label "Monyetan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Mustaka
+###  http://alunalun.info/ontology/rumahtradisional#Mustaka
 rumah:Mustaka rdf:type owl:NamedIndividual ,
                        rumah:RagamHias ;
               schema:image "MUSTAKA.PNG" ;
@@ -3227,7 +3227,7 @@ rumah:Mustaka rdf:type owl:NamedIndividual ,
               rdfs:label "Mustaka" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pagelaran_Wayang
+###  http://alunalun.info/ontology/rumahtradisional#Pagelaran_Wayang
 rumah:Pagelaran_Wayang rdf:type owl:NamedIndividual ,
                                 rumah:UpacaraAdat ;
                        schema:image "not_found.png" ;
@@ -3235,14 +3235,14 @@ rumah:Pagelaran_Wayang rdf:type owl:NamedIndividual ,
                        rdfs:label "Pagelaran Wayang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pakiwon
+###  http://alunalun.info/ontology/rumahtradisional#Pakiwon
 rumah:Pakiwon rdf:type owl:NamedIndividual ,
                        rumah:RuangRumah ;
               rdfs:comment "Pakiwon merupakan ruang rumah yang berfungsi sebagai tempat mengambil ar wudhu dan biasanya terdapat sumur di Pakiwon." ;
               rdfs:label "Pakiwon" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Panah
+###  http://alunalun.info/ontology/rumahtradisional#Panah
 rumah:Panah rdf:type owl:NamedIndividual ,
                      rumah:RagamHias ;
             schema:image "PANAH.PNG" ;
@@ -3250,7 +3250,7 @@ rumah:Panah rdf:type owl:NamedIndividual ,
             rdfs:label "Panah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeBarengan
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeBarengan
 rumah:PanggangPeBarengan rdf:type owl:NamedIndividual ,
                                   rumah:RumahPanggangPe ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3269,7 +3269,7 @@ rumah:PanggangPeBarengan rdf:type owl:NamedIndividual ,
                          rdfs:label "Panggang Pe Barengan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeBentukKios
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeBentukKios
 rumah:PanggangPeBentukKios rdf:type owl:NamedIndividual ,
                                     rumah:RumahPanggangPe ;
                            rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3288,7 +3288,7 @@ rumah:PanggangPeBentukKios rdf:type owl:NamedIndividual ,
                            rdfs:label "Panggang Pe Bentuk Kios" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeCereGancet
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeCereGancet
 rumah:PanggangPeCereGancet rdf:type owl:NamedIndividual ,
                                     rumah:RumahPanggangPe ;
                            rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3307,7 +3307,7 @@ rumah:PanggangPeCereGancet rdf:type owl:NamedIndividual ,
                            rdfs:label "Panggang Pe Cere Gancet" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeEmpyakSetangkep
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeEmpyakSetangkep
 rumah:PanggangPeEmpyakSetangkep rdf:type owl:NamedIndividual ,
                                          rumah:RumahPanggangPe ;
                                 rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3326,7 +3326,7 @@ rumah:PanggangPeEmpyakSetangkep rdf:type owl:NamedIndividual ,
                                 rdfs:label "Panggang Pe Empyak Setangkep" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeGedangSelirang
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeGedangSelirang
 rumah:PanggangPeGedangSelirang rdf:type owl:NamedIndividual ,
                                         rumah:RumahPanggangPe ;
                                rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3346,7 +3346,7 @@ rumah:PanggangPeGedangSelirang rdf:type owl:NamedIndividual ,
                                rdfs:label "Panggang Pe Gedang Selirang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeKondhokan
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeKondhokan
 rumah:PanggangPeKondhokan rdf:type owl:NamedIndividual ,
                                    rumah:RumahPanggangPe ;
                           rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3365,7 +3365,7 @@ rumah:PanggangPeKondhokan rdf:type owl:NamedIndividual ,
                           rdfs:label "Panggang Pe Kondhokan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPePokok
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPePokok
 rumah:PanggangPePokok rdf:type owl:NamedIndividual ,
                                rumah:RumahPanggangPe ;
                       rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3384,7 +3384,7 @@ rumah:PanggangPePokok rdf:type owl:NamedIndividual ,
                       rdfs:label "Panggang Pe Pokok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PanggangPeTrajumas
+###  http://alunalun.info/ontology/rumahtradisional#PanggangPeTrajumas
 rumah:PanggangPeTrajumas rdf:type owl:NamedIndividual ,
                                   rumah:RumahPanggangPe ;
                          rumah:hasKasta rumah:MasyarakatUmum ;
@@ -3403,47 +3403,47 @@ rumah:PanggangPeTrajumas rdf:type owl:NamedIndividual ,
                          rdfs:label "Panggang Pe Trajumas" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pasir
+###  http://alunalun.info/ontology/rumahtradisional#Pasir
 rumah:Pasir rdf:type owl:NamedIndividual ,
                      rumah:Non_Logam ;
             rdfs:label "Pasir" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pawon
+###  http://alunalun.info/ontology/rumahtradisional#Pawon
 rumah:Pawon rdf:type owl:NamedIndividual ,
                      rumah:RuangRumah ;
             rdfs:comment "Pawon merupakan ruang rumah yang berfungsi sebagai tempat meracik atau mengolah segala hal yang berkaitan dengan makanan atau kebutuhan pangan anggota keluarga. Pawon dalam bahasa umumnya disebut sebagai dapur." ;
             rdfs:label "Pawon" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pendapa
+###  http://alunalun.info/ontology/rumahtradisional#Pendapa
 rumah:Pendapa rdf:type owl:NamedIndividual ,
                        rumah:RuangRumah ;
               rdfs:comment "Pendapa merupakan bagian terdepan dari rumah Joglo yang berfungsi sebagai tempat menerima tamu dan tempat mengadakan upacara-upacara adat. Pendapa merupakan ruangan terbuka tanpa penutup sebagai lambang keterbukaan dari pemilik rumah." ;
               rdfs:label "Pendapa" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pengerat
+###  http://alunalun.info/ontology/rumahtradisional#Pengerat
 rumah:Pengerat rdf:type owl:NamedIndividual ,
                         rumah:Tiang ;
                rumah:hasBahan rumah:KayuJati ;
                rdfs:label "Pengerat" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Persegi_Panjang
+###  http://alunalun.info/ontology/rumahtradisional#Persegi_Panjang
 rumah:Persegi_Panjang rdf:type owl:NamedIndividual ,
                                rumah:Konstruksi ;
                       rdfs:label "Persegi Panjang" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Plester
+###  http://alunalun.info/ontology/rumahtradisional#Plester
 rumah:Plester rdf:type owl:NamedIndividual ,
                        rumah:Lantai ;
               rumah:hasBahan rumah:Semen ;
               rdfs:label "Plester" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Praba
+###  http://alunalun.info/ontology/rumahtradisional#Praba
 rumah:Praba rdf:type owl:NamedIndividual ,
                      rumah:RagamHias ;
             schema:image "PRABA.PNG" ;
@@ -3451,77 +3451,77 @@ rumah:Praba rdf:type owl:NamedIndividual ,
             rdfs:label "Praba" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Pringgitan
+###  http://alunalun.info/ontology/rumahtradisional#Pringgitan
 rumah:Pringgitan rdf:type owl:NamedIndividual ,
                           rumah:RuangRumah ;
                  rdfs:comment "Pringgitan merupakan ruang rumah yang berfungsi sebagai tempat pertunjukan wayang kulit dan tempat untuk menerima tamu. Pringgitan terletak antara ruangan Pendapa dan Dalem." ;
                  rdfs:label "Pringgitan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PurusJabung
+###  http://alunalun.info/ontology/rumahtradisional#PurusJabung
 rumah:PurusJabung rdf:type owl:NamedIndividual ,
                            rumah:Tiang ;
                   rumah:hasBahan rumah:KayuJati ;
                   rdfs:label "Purus Jabung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PurusLanangan
+###  http://alunalun.info/ontology/rumahtradisional#PurusLanangan
 rumah:PurusLanangan rdf:type owl:NamedIndividual ,
                              rumah:Tiang ;
                     rumah:hasBahan rumah:KayuJati ;
                     rdfs:label "Purus Lanangan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PurusPatok
+###  http://alunalun.info/ontology/rumahtradisional#PurusPatok
 rumah:PurusPatok rdf:type owl:NamedIndividual ,
                           rumah:Tiang ;
                  rumah:hasBahan rumah:KayuJati ;
                  rdfs:label "Purus Patok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#PurusWedokan
+###  http://alunalun.info/ontology/rumahtradisional#PurusWedokan
 rumah:PurusWedokan rdf:type owl:NamedIndividual ,
                             rumah:Tiang ;
                    rumah:hasBahan rumah:KayuJati ;
                    rdfs:label "Purus Wedokan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RuangDepan
+###  http://alunalun.info/ontology/rumahtradisional#RuangDepan
 rumah:RuangDepan rdf:type owl:NamedIndividual ,
                           rumah:RuangRumah ;
                  rdfs:comment "Ruang Depan atau Teras merupakan ruang rumah yang digunakan untuk menerima tamu lelaki. Selain itu, Ruang Depan juga digunakan untuk aktivitas keseharian yang bersifat santai dan nonformal, seperti sekedar duduk dan berbincang hingga tempat leyeh-leyeh melepas penat sehabis seharian bekerja." ;
                  rdfs:label "Ruang Depan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RuangSerbaguna
+###  http://alunalun.info/ontology/rumahtradisional#RuangSerbaguna
 rumah:RuangSerbaguna rdf:type owl:NamedIndividual ,
                               rumah:RuangRumah ;
                      rdfs:comment "Ruang Serbaguna merupakan ruang rumah yang digunakan untuk berbagai untuk bermacam-macam kepentingan seperti tempat tidur, tempat istirahat, tempat tamu, dan juga tempat makan bersama." ;
                      rdfs:label "Ruang Serbaguna" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RuangTengah
+###  http://alunalun.info/ontology/rumahtradisional#RuangTengah
 rumah:RuangTengah rdf:type owl:NamedIndividual ,
                            rumah:RuangRumah ;
                   rdfs:comment "Ruang Tengah merupakan ruang rumah terluas pada rumah Limasan dan Kampung yang berfungsi sebagai ruang keluarga, sekaligus tempat untuk menerima tamu secara formal. Di ruang inilah berdiri tegak soko guru rumah tersebut yang melambangkan persatuan antar anggota keluarga." ;
                   rdfs:label "Ruang Tengah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#RuangWudhu
+###  http://alunalun.info/ontology/rumahtradisional#RuangWudhu
 rumah:RuangWudhu rdf:type owl:NamedIndividual ,
                           rumah:RuangRumah ;
                  rdfs:comment "Ruang Wudhu merupakan ruang rumah, terkhusus pada rumah Tajug, yang difungsikan sebagai tempat mengambil air wudhu. Ruang Wudhu menjadi lambang pembersihan diri sebelum melakukan sembahyang." ;
                  rdfs:label "Ruang Wudhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Santen
+###  http://alunalun.info/ontology/rumahtradisional#Santen
 rumah:Santen rdf:type owl:NamedIndividual ,
                       rumah:Tiang ;
              rumah:hasBahan rumah:KayuJati ;
              rdfs:label "Santen" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Saton
+###  http://alunalun.info/ontology/rumahtradisional#Saton
 rumah:Saton rdf:type owl:NamedIndividual ,
                      rumah:RagamHias ;
             schema:image "SATON.PNG" ;
@@ -3529,7 +3529,7 @@ rumah:Saton rdf:type owl:NamedIndividual ,
             rdfs:label "Saton" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Sedekah_Rebutan
+###  http://alunalun.info/ontology/rumahtradisional#Sedekah_Rebutan
 rumah:Sedekah_Rebutan rdf:type owl:NamedIndividual ,
                                rumah:UpacaraAdat ;
                       schema:image "not_found.png" ;
@@ -3537,7 +3537,7 @@ rumah:Sedekah_Rebutan rdf:type owl:NamedIndividual ,
                       rdfs:label "Sedekah Rebutan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Selametan_Kepung_Tumpeng
+###  http://alunalun.info/ontology/rumahtradisional#Selametan_Kepung_Tumpeng
 rumah:Selametan_Kepung_Tumpeng rdf:type owl:NamedIndividual ,
                                         rumah:UpacaraAdat ;
                                schema:image "not_found.png" ;
@@ -3545,13 +3545,13 @@ rumah:Selametan_Kepung_Tumpeng rdf:type owl:NamedIndividual ,
                                rdfs:label "Selametan Kepung Tumpeng" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Semen
+###  http://alunalun.info/ontology/rumahtradisional#Semen
 rumah:Semen rdf:type owl:NamedIndividual ,
                      rumah:Non_Logam ;
             rdfs:label "Semen" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Senthir
+###  http://alunalun.info/ontology/rumahtradisional#Senthir
 rumah:Senthir rdf:type owl:NamedIndividual ,
                        rumah:UpacaraAdat ;
               schema:image "not_found.png" ;
@@ -3559,46 +3559,46 @@ rumah:Senthir rdf:type owl:NamedIndividual ,
               rdfs:label "Senthir" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#SenthongKiwo
+###  http://alunalun.info/ontology/rumahtradisional#SenthongKiwo
 rumah:SenthongKiwo rdf:type owl:NamedIndividual ,
                             rumah:RuangRumah ;
                    rdfs:label "Senthong Kiwo" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#SenthongTengah
+###  http://alunalun.info/ontology/rumahtradisional#SenthongTengah
 rumah:SenthongTengah rdf:type owl:NamedIndividual ,
                               rumah:RuangRumah ;
                      rdfs:label "Senthong Tengah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#SenthongTengen
+###  http://alunalun.info/ontology/rumahtradisional#SenthongTengen
 rumah:SenthongTengen rdf:type owl:NamedIndividual ,
                               rumah:RuangRumah ;
                      rdfs:label "Senthong Tengen" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Serambi
+###  http://alunalun.info/ontology/rumahtradisional#Serambi
 rumah:Serambi rdf:type owl:NamedIndividual ,
                        rumah:RuangRumah ;
               rdfs:comment "Serambi merupakan ruang rumah, terkhusus pada rumah Tajug, yang berfungsi sama dengan Liwan dan dapat digunakan sebagai tempat ibadah juga apabila Liwan sudah penuh." ;
               rdfs:label "Serambi" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#SokoGuru
+###  http://alunalun.info/ontology/rumahtradisional#SokoGuru
 rumah:SokoGuru rdf:type owl:NamedIndividual ,
                         rumah:Tiang ;
                rumah:hasBahan rumah:KayuJati ;
                rdfs:label "Soko Guru" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Sunduk
+###  http://alunalun.info/ontology/rumahtradisional#Sunduk
 rumah:Sunduk rdf:type owl:NamedIndividual ,
                       rumah:Tiang ;
              rumah:hasBahan rumah:KayuJati ;
              rdfs:label "Sunduk" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugCeblokan
+###  http://alunalun.info/ontology/rumahtradisional#TajugCeblokan
 rumah:TajugCeblokan rdf:type owl:NamedIndividual ,
                              rumah:RumahTajug ;
                     rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3629,7 +3629,7 @@ rumah:TajugCeblokan rdf:type owl:NamedIndividual ,
                     rdfs:label "Tajug Ceblokan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugCungkup
+###  http://alunalun.info/ontology/rumahtradisional#TajugCungkup
 rumah:TajugCungkup rdf:type owl:NamedIndividual ,
                             rumah:RumahTajug ;
                    rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3661,7 +3661,7 @@ rumah:TajugCungkup rdf:type owl:NamedIndividual ,
                    rdfs:label "Tajug Cungkup" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugLambangGantung
+###  http://alunalun.info/ontology/rumahtradisional#TajugLambangGantung
 rumah:TajugLambangGantung rdf:type owl:NamedIndividual ,
                                    rumah:RumahTajug ;
                           rumah:hasKomponen rumah:Ander ,
@@ -3693,7 +3693,7 @@ rumah:TajugLambangGantung rdf:type owl:NamedIndividual ,
                           rdfs:label "Tajug Lambang Gantung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugLambangSari
+###  http://alunalun.info/ontology/rumahtradisional#TajugLambangSari
 rumah:TajugLambangSari rdf:type owl:NamedIndividual ,
                                 rumah:RumahTajug ;
                        rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3724,7 +3724,7 @@ rumah:TajugLambangSari rdf:type owl:NamedIndividual ,
                        rdfs:label "Tajug Lambang Sari" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugLawakanLambangTeplok
+###  http://alunalun.info/ontology/rumahtradisional#TajugLawakanLambangTeplok
 rumah:TajugLawakanLambangTeplok rdf:type owl:NamedIndividual ,
                                          rumah:RumahTajug ;
                                 rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3754,7 +3754,7 @@ rumah:TajugLawakanLambangTeplok rdf:type owl:NamedIndividual ,
                                 rdfs:label "Tajug Lawakan Lambang Teplok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugMangkurat
+###  http://alunalun.info/ontology/rumahtradisional#TajugMangkurat
 rumah:TajugMangkurat rdf:type owl:NamedIndividual ,
                               rumah:RumahTajug ;
                      rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3785,7 +3785,7 @@ rumah:TajugMangkurat rdf:type owl:NamedIndividual ,
                      rdfs:label "Tajug Mangkurat" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugSemarSinongsong
+###  http://alunalun.info/ontology/rumahtradisional#TajugSemarSinongsong
 rumah:TajugSemarSinongsong rdf:type owl:NamedIndividual ,
                                     rumah:RumahTajug ;
                            rumah:hasKomponen rumah:Atap_Gajah ,
@@ -3814,7 +3814,7 @@ rumah:TajugSemarSinongsong rdf:type owl:NamedIndividual ,
                            rdfs:label "Tajug Semar Sinongsong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugSemarSinongsongLambangGantung
+###  http://alunalun.info/ontology/rumahtradisional#TajugSemarSinongsongLambangGantung
 rumah:TajugSemarSinongsongLambangGantung rdf:type owl:NamedIndividual ,
                                                   rumah:RumahTajug ;
                                          rumah:hasKomponen rumah:Atap_Gajah ,
@@ -3844,7 +3844,7 @@ rumah:TajugSemarSinongsongLambangGantung rdf:type owl:NamedIndividual ,
                                          rdfs:label "Tajug Semar Sinongsong Lambang Gantung" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugSemarTinandhu
+###  http://alunalun.info/ontology/rumahtradisional#TajugSemarTinandhu
 rumah:TajugSemarTinandhu rdf:type owl:NamedIndividual ,
                                   rumah:RumahTajug ;
                          rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3874,7 +3874,7 @@ rumah:TajugSemarTinandhu rdf:type owl:NamedIndividual ,
                          rdfs:label "Tajug Semar Tinandhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugSinomTinandhu
+###  http://alunalun.info/ontology/rumahtradisional#TajugSinomTinandhu
 rumah:TajugSinomTinandhu rdf:type owl:NamedIndividual ,
                                   rumah:RumahTajug ;
                          rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3905,7 +3905,7 @@ rumah:TajugSinomTinandhu rdf:type owl:NamedIndividual ,
                          rdfs:label "Tajug Sinom Tinandhu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugTawonBoni
+###  http://alunalun.info/ontology/rumahtradisional#TajugTawonBoni
 rumah:TajugTawonBoni rdf:type owl:NamedIndividual ,
                               rumah:RumahTajug ;
                      rumah:hasKomponen rumah:Atap_Gajah ,
@@ -3934,7 +3934,7 @@ rumah:TajugTawonBoni rdf:type owl:NamedIndividual ,
                      rdfs:label "Tajug Tawon Boni" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TajugTiangSatuLambangTeplok
+###  http://alunalun.info/ontology/rumahtradisional#TajugTiangSatuLambangTeplok
 rumah:TajugTiangSatuLambangTeplok rdf:type owl:NamedIndividual ,
                                            rumah:RumahTajug ;
                                   rumah:hasKomponen rumah:Atap_Brunjung ,
@@ -3965,32 +3965,32 @@ rumah:TajugTiangSatuLambangTeplok rdf:type owl:NamedIndividual ,
                                   rdfs:label "Tajug Tiang Satu Lambang Teplok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tanah
+###  http://alunalun.info/ontology/rumahtradisional#Tanah
 rumah:Tanah rdf:type owl:NamedIndividual ,
                      rumah:Non_Logam ;
             rdfs:label "Tanah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TanahLiat
+###  http://alunalun.info/ontology/rumahtradisional#TanahLiat
 rumah:TanahLiat rdf:type owl:NamedIndividual ,
                          rumah:Non_Logam ;
                 rdfs:label "Tanah Liat" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tembok
+###  http://alunalun.info/ontology/rumahtradisional#Tembok
 rumah:Tembok rdf:type owl:NamedIndividual ,
                       rumah:Dinding ;
              rumah:hasBahan rumah:BatuBata ;
              rdfs:label "Tembok" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Timah
+###  http://alunalun.info/ontology/rumahtradisional#Timah
 rumah:Timah rdf:type owl:NamedIndividual ,
                      rumah:Logam ;
             rdfs:label "Timah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tlancapan
+###  http://alunalun.info/ontology/rumahtradisional#Tlancapan
 rumah:Tlancapan rdf:type owl:NamedIndividual ,
                          rumah:RagamHias ;
                 schema:image "TLANCAPAN.PNG" ;
@@ -3998,14 +3998,14 @@ rumah:Tlancapan rdf:type owl:NamedIndividual ,
                 rdfs:label "Tlacapan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Topong
+###  http://alunalun.info/ontology/rumahtradisional#Topong
 rumah:Topong rdf:type owl:NamedIndividual ,
                       rumah:Tiang ;
              rumah:hasBahan rumah:KayuJati ;
              rdfs:label "Topong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tulak_Bala
+###  http://alunalun.info/ontology/rumahtradisional#Tulak_Bala
 rumah:Tulak_Bala rdf:type owl:NamedIndividual ,
                           rumah:UpacaraAdat ;
                  schema:image "not_found.png" ;
@@ -4013,20 +4013,20 @@ rumah:Tulak_Bala rdf:type owl:NamedIndividual ,
                  rdfs:label "Tulak Bala" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#TutupKepuh
+###  http://alunalun.info/ontology/rumahtradisional#TutupKepuh
 rumah:TutupKepuh rdf:type owl:NamedIndividual ,
                           rumah:Tiang ;
                  rumah:hasBahan rumah:KayuJati ;
                  rdfs:label "Tutup Kepuh" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Tutup_Keong
+###  http://alunalun.info/ontology/rumahtradisional#Tutup_Keong
 rumah:Tutup_Keong rdf:type owl:NamedIndividual ,
                            rumah:Atap ;
                   rdfs:label "Tutup Keong" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#UlarNaga
+###  http://alunalun.info/ontology/rumahtradisional#UlarNaga
 rumah:UlarNaga rdf:type owl:NamedIndividual ,
                         rumah:RagamHias ;
                schema:image "ULAR_NAGA.PNG" ;
@@ -4034,14 +4034,14 @@ rumah:UlarNaga rdf:type owl:NamedIndividual ,
                rdfs:label "Ular Naga" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#UmpakBatu
+###  http://alunalun.info/ontology/rumahtradisional#UmpakBatu
 rumah:UmpakBatu rdf:type owl:NamedIndividual ,
                          rumah:Umpak ;
                 rumah:hasBahan rumah:BatuKali ;
                 rdfs:label "Umpak Batu" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Upacara_Kebatinan
+###  http://alunalun.info/ontology/rumahtradisional#Upacara_Kebatinan
 rumah:Upacara_Kebatinan rdf:type owl:NamedIndividual ,
                                  rumah:UpacaraAdat ;
                         schema:image "not_found.png" ;
@@ -4049,7 +4049,7 @@ rumah:Upacara_Kebatinan rdf:type owl:NamedIndividual ,
                         rdfs:label "Upacara Kebatinan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Upacara_Menatah_Molo
+###  http://alunalun.info/ontology/rumahtradisional#Upacara_Menatah_Molo
 rumah:Upacara_Menatah_Molo rdf:type owl:NamedIndividual ,
                                     rumah:UpacaraAdat ;
                            schema:image "not_found.png" ;
@@ -4057,7 +4057,7 @@ rumah:Upacara_Menatah_Molo rdf:type owl:NamedIndividual ,
                            rdfs:label "Upacara Menatah Molo" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Upacara_Ngadegake_Omah
+###  http://alunalun.info/ontology/rumahtradisional#Upacara_Ngadegake_Omah
 rumah:Upacara_Ngadegake_Omah rdf:type owl:NamedIndividual ,
                                       rumah:UpacaraAdat ;
                              schema:image "not_found.png" ;
@@ -4065,7 +4065,7 @@ rumah:Upacara_Ngadegake_Omah rdf:type owl:NamedIndividual ,
                              rdfs:label "Upacara Ngadegake Omah" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Upacara_Tumpeng
+###  http://alunalun.info/ontology/rumahtradisional#Upacara_Tumpeng
 rumah:Upacara_Tumpeng rdf:type owl:NamedIndividual ,
                                rumah:UpacaraAdat ;
                       schema:image "not_found.png" ;
@@ -4073,7 +4073,7 @@ rumah:Upacara_Tumpeng rdf:type owl:NamedIndividual ,
                       rdfs:label "Upacara Tumpeng" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Wajikan
+###  http://alunalun.info/ontology/rumahtradisional#Wajikan
 rumah:Wajikan rdf:type owl:NamedIndividual ,
                        rumah:RagamHias ;
               schema:image "WAJIKAN.PNG" ;
@@ -4081,7 +4081,7 @@ rumah:Wajikan rdf:type owl:NamedIndividual ,
               rdfs:label "Wajikan" .
 
 
-###  http://www.semanticweb.org/kristiantopdp/rumahtradisionaljawa#Yogyakarta
+###  http://alunalun.info/ontology/rumahtradisional#Yogyakarta
 rumah:Yogyakarta rdf:type owl:NamedIndividual ,
                           rumah:Provinsi ;
                  rdfs:label "Yogyakarta" .
