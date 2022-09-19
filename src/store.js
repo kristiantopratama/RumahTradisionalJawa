@@ -10,7 +10,7 @@ app.use(Vuex, axios)
 
 /* var urlsparql = "http://localhost:3030/RumahTradisionalJawa" */
 
-var urlsparql = "https://app.alunalun.info//fuseki/rumahtradisional/query"
+var urlsparql = "https://app.alunalun.info/fuseki/rumahtradisional"
 
 export default new Vuex.Store({
   state: {
