@@ -8,7 +8,9 @@ const app = createApp(App)
 
 app.use(Vuex, axios)
 
-var urlsparql = "http://localhost:3030/RumahTradisionalJawa"
+/* var urlsparql = "http://localhost:3030/RumahTradisionalJawa" */
+
+var urlsparql = "https://app.alunalun.info//fuseki/rumahtradisional/query"
 
 export default new Vuex.Store({
   state: {
