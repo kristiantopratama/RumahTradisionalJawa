@@ -50,8 +50,8 @@
                     </span>
             
                     <span v-if="i.image" class="navigasiImage">
-                        <img class="center_detail" v-bind:src="'/src/assets/' + (i.image.value)">
-                        <img class="center_detail" v-bind:src="'/src/assets/' + (i.image2.value)">
+                        <img class="center_detail" v-bind:src="'../assets/' + (i.image.value)">
+                        <img class="center_detail" v-bind:src="'../assets/' + (i.image2.value)">
                         <br>
                     </span>
 
