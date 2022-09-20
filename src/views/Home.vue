@@ -26,7 +26,7 @@
 				<a href="#" class="search" style="margin-right:2%;">SEARCH</a>
 
 				<div class="search" style="top:2.5px; margin:0; line-height:0.5;">
-					<input v-model="message" type="text" placeholder="Search" size="2" style="height:40%; width:110%;">
+					<input v-model="message" type="text" placeholder="Search" size="2" style="height:40%; width:110%;border-radius:5px">
 					<span @click="reloadPage" type="submit" style="font-size: 12px; height:40%; border-radius:0; border:2px solid; border-color:black; padding-bottom:4px;">
 						<router-link :to="{ name: 'search', params: {id: message}}" style="text-align:center;">
 							<b>&nbsp;Search&nbsp;Rumah&nbsp;</b>

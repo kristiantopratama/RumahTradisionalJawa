@@ -3,7 +3,7 @@
 body{
     margin: 0;
     width: 100%;
-    font-family: serif;
+    font-family: Candara, serif;
 }
 
 h1{
@@ -17,7 +17,7 @@ nav{
     border-bottom-style: outset;
     border-color: black;
     border-width: 2px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
 }
 
 
@@ -249,7 +249,7 @@ p{
     margin-left: 25px;
     margin-right: 120px;
     font-size: 18px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
     
 }
 
@@ -259,7 +259,7 @@ p{
     margin-left: 25px;
     margin-right: 120px;
     font-size: 18px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
     
 }
 
@@ -270,7 +270,7 @@ p{
     margin-left: 5px;
     margin-right: 70px;
     font-size: 17px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
 }
 
 .deskripsiupacaraadat{
@@ -279,7 +279,7 @@ p{
     margin-left: 5px;
     margin-right: 70px;
     font-size: 15px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
 }
 
 .deskripsikomponen{
@@ -288,7 +288,7 @@ p{
     margin-left: 5px;
     margin-right: 70px;
     font-size: 12px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
 }
 
 .deskripsi2{
@@ -297,7 +297,7 @@ p{
     margin-left: 20px;
     margin-right: 120px;
     font-size: 15px;
-    font-family: open sans-serif;
+    font-family: Candara, serif;
     
 }
 
