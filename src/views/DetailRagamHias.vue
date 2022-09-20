@@ -54,7 +54,7 @@
             <div class="navigasi" v-for="(i,index) in getDeskripsiRagamHias" :key="index">
                 <div class="content2"  >
                     <div v-if="i.image">
-                        <img class="centerrumah" v-bind:src="'/src/assets/' + (i.image.value)" style="height:50vh;">
+                        <img class="centerrumah" v-bind:src="'../assets/' + (i.image.value)" style="height:50vh;">
                         <br>
                     </div>
                 </div>
