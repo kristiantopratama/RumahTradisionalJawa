@@ -336,7 +336,7 @@ p{
     top: 2vh;
     left: 41%;
     font-size: 20px;
-    font-family: 'Lucida Sans';
+    font-family: Candara, serif;
 }
 
 .judul_visualisasi{
@@ -345,7 +345,7 @@ p{
     top: 2vh;
     left: 35%;
     font-size: 20px;
-    font-family: 'Lucida Sans';
+    font-family: Candara, serif;
 }
 
 .judul_rumah{
@@ -353,7 +353,7 @@ p{
     margin-right: auto;
     text-align: center;
     font-size: 30px;
-    font-family: 'Lucida Sans';
+    font-family: Candara, serif;
 }
 
 .deskripsi_ruang{
