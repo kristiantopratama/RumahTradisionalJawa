@@ -40,7 +40,7 @@
 		
 	</nav>
 
-	<section style="height:310vh;">
+	<section style="height:315vh;">
 		<div class="content1">
 			<span class="judul_home">
 				<b>Rumah Tradisional Jawa</b>	
