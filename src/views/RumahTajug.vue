@@ -29,7 +29,7 @@
 		
 	    </nav>
 
-        <section style="height: 235vh;">
+        <section style="height: 240vh;">
 
             <div class="content1">
                 <h1 class="judul_rumah">
