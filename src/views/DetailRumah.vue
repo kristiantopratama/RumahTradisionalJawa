@@ -50,8 +50,8 @@
                     </span>
             
                     <span v-if="i.image" class="navigasiImage">
-                        <img class="center_detail" v-bind:src="'../assets/' + (i.image.value)">
-                        <img class="center_detail" v-bind:src="'../assets/' + (i.image2.value)">
+                        <img class="center_detail" v-bind:src="'../src/assets/' + (i.image.value)">
+                        <img class="center_detail" v-bind:src="'../src/assets/' + (i.image2.value)">
                         <br>
                     </span>
 
@@ -215,16 +215,6 @@ export default {
     this.$store.dispatch('getUpacaraAdat', this.$route.params.id),
     this.$store.dispatch('getRagamHias', this.$route.params.id)
 
-    // this.$store.dispatch('getDetailRumah', this.$route.params.id),
-    // this.$store.dispatch('getRuangRumah', this.$route.params.id),
-    // this.$store.dispatch('getTinggiRumah', this.$route.params.id),
-    // this.$store.dispatch('getOrnamen', this.$route.params.id),
-    // this.$store.dispatch('getAtap', this.$route.params.id),
-    // this.$store.dispatch('getDinding', this.$route.params.id),
-    // this.$store.dispatch('getTiang', this.$route.params.id),
-    // this.$store.dispatch('getLantai', this.$route.params.id),
-    // this.$store.dispatch('getJenisRumah', this.$route.params.id)
-     
   },
   computed:{
       ...mapState([
@@ -237,15 +227,6 @@ export default {
         'getUpacaraAdat',
         'getRagamHias'
 
-        // 'getDetailRumah',
-        // 'getRuangRumah',
-        // 'getTinggiRumah',
-        // 'getOrnamen',
-        // 'getAtap',
-        // 'getDinding',
-        // 'getTiang',
-        // 'getLantai',
-        // 'getJenisRumah'
       ])
   },
   methods:{
@@ -258,16 +239,7 @@ export default {
         'getKomponenAll',
         'getUpacaraAdat',
         'getRagamHias'
-        
-        // 'getDetailRumah',
-        // 'getRuangRumah',
-        // 'getTinggiRumah',
-        // 'getOrnamen',
-        // 'getAtap',
-        // 'getDinding',
-        // 'getTiang',
-        // 'getLantai',
-        // 'getJenisRumah'
+
       ]),
 
 

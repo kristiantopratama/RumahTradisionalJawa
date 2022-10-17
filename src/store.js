@@ -8,9 +8,9 @@ const app = createApp(App)
 
 app.use(Vuex, axios)
 
-/* var urlsparql = "http://localhost:3030/RumahTradisionalJawa" */
+var urlsparql = "http://localhost:3030/RumahTradisionalJawa"
 
-var urlsparql = "https://app.alunalun.info/fuseki/rumahtradisional"
+// var urlsparql = "http://app.alunalun.info/fuseki/rumahtradisional"
 
 export default new Vuex.Store({
   state: {
@@ -152,7 +152,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2
           WHERE { 
@@ -183,7 +183,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2
           WHERE { 
@@ -214,7 +214,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2
           WHERE { 
@@ -245,7 +245,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2
           WHERE { 
@@ -276,7 +276,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2
           WHERE { 
@@ -307,7 +307,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -337,7 +337,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -367,7 +367,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -397,7 +397,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -427,7 +427,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -457,7 +457,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT DISTINCT ?class ?label ?description
           WHERE {
@@ -487,7 +487,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?image ?image2 ?deskripsi
           WHERE { 
@@ -522,7 +522,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?ruangRumah
             WHERE { 
@@ -556,7 +556,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?atapRumah
             WHERE { 
@@ -590,7 +590,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?tiangRumah
             WHERE { 
@@ -624,7 +624,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?kastaRumah
             WHERE { 
@@ -657,7 +657,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRumah ?komponenRumah
             WHERE { 
@@ -699,7 +699,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?upacaraAdat
             WHERE { 
@@ -732,7 +732,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
           
           SELECT ?namaRumah ?namaRagamHias ?Deskripsi ?image
           WHERE {
@@ -763,7 +763,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRagamHias ?image
           WHERE {
@@ -792,7 +792,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaUpacara ?image
             WHERE { 
@@ -821,7 +821,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRumah ?namaUpacara ?image
             WHERE { 
@@ -855,7 +855,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaUpacara ?image ?deskripsi
             WHERE { 
@@ -886,14 +886,15 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
-          SELECT ?namaKomponen
+          SELECT ?namaKomponen ?deskripsi
             WHERE { 
   				    ?type rdfs:subClassOf* rumah:KomponenRumah .
               ?a rdf:type ?type .
               ?a rdfs:label "${id}" .
   				    ?a rdfs:label ?namaKomponen .
+              OPTIONAL { ?a rdfs:comment ?deskripsi }
               } `
         }
       }).then((response) => {
@@ -916,7 +917,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaKomponen ?namaRumah ?image
             WHERE { 
@@ -949,7 +950,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRuang ?deskripsi
             WHERE { 
@@ -979,7 +980,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRuang ?namaRumah ?image
             WHERE { 
@@ -1012,7 +1013,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?namaRumah ?image ?deskripsi
         	WHERE {
@@ -1044,7 +1045,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?type ?namaRumah ?ragamHias
             WHERE { 
@@ -1078,7 +1079,7 @@ export default new Vuex.Store({
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-          PREFIX rumah: <https://alunalun.info/ontology/rumahtradisional#>
+          PREFIX rumah: <http://alunalun.info/ontology/rumahtradisional#>
 
           SELECT ?ragamHias ?namaRumah ?image
             WHERE { 

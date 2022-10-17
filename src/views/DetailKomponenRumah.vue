@@ -33,29 +33,29 @@
                         </span>
 				    </div>
 
-                </div>
-                
-            </div>
-		
+                </div>              
+            </div>	
 	    </nav>
 
-        <section style="height: 100vh;">
+        <section style="height: 110vh;">
 
             <div class="content1" v-for="(i,index) in getKomponenRumah" :key="index">
                 <div v-if="i.namaKomponen">
                     <h1 class="judul_rumah" >
                         <br>
                         {{i.namaKomponen.value}}
-                        <br>
-                        <br>
                     </h1>
                 </div>
                 <div v-if="i.deskripsi">
-                    <p class="judul_rumah" style="font-size:24px;" >
-                        {{i.deskripsi.value}}
+                    <p class="deskripsi_ruang" >
+                        <br>
+                        "{{i.deskripsi.value}}"
+                        <br><br>
                     </p>
                 </div>
-
+                <span v-else>
+                    <br><br>
+                </span>
             </div>
             
             <p class="judul_rumah" style="font-size:24px;" >

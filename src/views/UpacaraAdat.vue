@@ -43,7 +43,7 @@
             <div class="navigasiImage">                   
                     <div class="content3" v-for="(i,index) in getAllUpacaraAdat" :key="index" >
                         <div v-if="i.image">
-                            <img class="centerrumah" v-bind:src="'../assets/' + (i.image.value)">
+                            <img class="centerrumah" v-bind:src=" '../src/assets/' + (i.image.value)">
                             <br>
                         </div>
                        
