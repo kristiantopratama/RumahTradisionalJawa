@@ -23,6 +23,23 @@
                     </router-link>
 
                     <a href="#" class="search">SEARCH</a>
+
+                    <div class="search" style="top:2.5px; margin:0; line-height:0.5;">
+                        <input v-model="message" type="text" placeholder="Search" size="2" style="height:40%; width:110%;border-radius:5px">
+                        <span @click="reloadPage" type="submit" style="font-size: 12px; height:40%; border-radius:0; border:2px solid; border-color:black; padding-bottom:4px;">
+                            <span v-if="message==null">
+                                <router-link :to="{ name: 'search', params: {id: 'null'}}" style="text-align:center;">
+                                    <b>&nbsp;Search&nbsp;Rumah&nbsp;</b>
+                                </router-link>
+						    </span>
+                            <span v-else>
+                                <router-link :to="{ name: 'search', params: {id: message}}" style="text-align:center;">
+                                    <b>&nbsp;Search&nbsp;Rumah&nbsp;</b>
+                                </router-link>
+                            </span>	
+	                    </span>
+				    </div>
+
                 </div>
                 
             </div>
@@ -57,7 +74,7 @@
                         <div>
                             <div class="deskripsi_center">
                                 <p>
-                                    <router-link :to="{ name: 'detailrumah', params: {id: i.namaRumah.value}}">
+                                    <router-link :to="{ name: 'detailrumah', params: {id: i.namaRumah.value}}" style="color: indigo;">
                                         {{i.namaRumah.value}}
                                         <br>
                                     </router-link>
@@ -108,7 +125,7 @@ export default {
   },
   data(){
     return{
-      selectComponent: 'getRumahPanggangPe'
+      message : null
     }
   },
 

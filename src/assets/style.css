@@ -64,6 +64,10 @@ p{
     line-height: 1.6em;
 }
 
+p router-link{
+    color: black;
+}
+
 
 
 
@@ -248,7 +252,7 @@ p{
     text-align: justify;
     margin-top: 50px;
     margin-left: 25px;
-    margin-right: 120px;
+    margin-right: 32px;
     font-size: 18px;
     font-family: Candara, serif;
     
@@ -258,7 +262,7 @@ p{
     text-align: justify;
     margin-top: 25px;
     margin-left: 25px;
-    margin-right: 120px;
+    margin-right: 42px;
     font-size: 18px;
     font-family: Candara, serif;
     
